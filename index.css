@@ -1,0 +1,150 @@
+:root{
+    --web-dark : url("./webb-dark.png");
+    --web : url("./webb.png");
+    --space-gap: 16px;
+}
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.container{
+    /* background-color: aqua; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--web-dark);
+}
+
+.main{
+    border: 1px solid black;
+    border-radius: var(--space-gap);
+    background-color: white;
+    box-shadow: 10px 10px 6px black;
+    width: 700px;
+    height: 421px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: var(--space-gap);
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu > li > a{
+    text-decoration: none;
+    color: black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 6px 10px;
+    cursor: pointer;
+    background-image: var(--web);
+}
+
+.menu > li > a:hover{
+    background-image: var(--web-dark);
+    color: white;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title::after, .title::before{
+    content: "";
+    display: block;
+    background-color: black;
+    height: 2px;
+    margin: 6px;
+    flex-grow: 1;
+}
+
+
+.content{
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: 
+    "n1 n2"
+    "n3 n3"
+    ;
+    gap: var(--space-gap);
+}
+
+.content > img{
+    width: 100%;
+    height: 125px;
+}
+
+.aboutMe{
+    grid-area: n3;
+    padding-right: var(--space-gap);
+    display: grid;
+    gap: var(--space-gap);
+}
+
+.aboutMe > h3{
+    font-style: italic;
+    font-weight: bolder;
+    margin-left: var(--space-gap);
+    display: flex;
+    align-items: center;
+}
+
+.aboutMe > h3::after{
+    content: "";
+    display: block;
+    background-color: black;
+    height: 2px;
+    flex-grow: 1;
+    margin: 6px;
+}
+
+.about{
+    text-align: justify;
+}
+
+
+/* skills */
+
+.content-skills{
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-areas: 
+    "n1 n2"
+    "n1 n2"
+    ;
+    gap: var(--space-gap);
+    height: 100%;
+}
+
+.content-skills > img{
+    grid-area: n1;
+    height: 100%;
+    width: 100%;
+}
+
+.skillsMe{
+    grid-area: n2;
+}
+
+.list-skills{
+    /* padding-left: 20px; */
+    list-style: none;
+    display: grid;
+    gap: 8px;
+}
