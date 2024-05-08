@@ -26,7 +26,7 @@
     border: 1px solid black;
     border-radius: var(--space-gap);
     background-color: white;
-    box-shadow: 10px 10px 6px black;
+    box-shadow: 10px 10px 12px rgb(59, 118, 255);
     width: 700px;
     height: 421px;
     display: flex;
@@ -46,8 +46,9 @@
 .menu > li > a{
     text-decoration: none;
     color: black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    box-shadow: 3px 3px 3px black;
     padding: 6px 10px;
     cursor: pointer;
     background-image: var(--web);
@@ -56,6 +57,10 @@
 .menu > li > a:hover{
     background-image: var(--web-dark);
     color: white;
+    border: 0px;
+    box-shadow: none;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .title{
@@ -147,4 +152,68 @@
     list-style: none;
     display: grid;
     gap: 8px;
+}
+
+.portafolio{
+    flex-grow: 1;
+    overflow: auto;
+    display: grid;
+    gap: var(--space-gap);
+}
+
+.portafolio::-webkit-scrollbar{
+    width: 3px;
+}
+
+.portafolio::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+
+.proyecto{
+    display: flex;
+    height: 200px;
+    gap: var(--space-gap);
+
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-gap);
+    padding-top: 20px;
+}
+
+.list-tegno{
+    list-style: none;
+    display: flex;
+    gap: 8px;
+}
+
+/* experiencia */
+
+.exp{
+    flex-grow: 1 ;
+    width: 100%;
+}
+
+.item-exp{
+    border-left: 2px solid black;
+    padding: 10px;
+}
+
+.item-exp > h2{
+    border-bottom: 1px solid black;
+    border-left: 3px solid blue;
+    padding-left: 6px;
+}
+.item-exp > h3, .fecha{
+    text-align: end;
+}
+
+.exp-resume{
+    margin: 10px 0px;
+}
+
+.item-exp > ul{
+    padding-left: 20px;
 }
